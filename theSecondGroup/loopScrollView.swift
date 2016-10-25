@@ -9,16 +9,16 @@
 import UIKit
 
 class loopScrollView: UIView,UIScrollViewDelegate {
-    let ScreenWidth = UIScreen.mainScreen().bounds.width
-    let ScreenHeight = UIScreen.mainScreen().bounds.height
-    private var scrollView = UIScrollView()
-    private var pageControl = UIPageControl()
-    private var collectionView = UICollectionView()
-    private var keyWindow = UIWindow()
-    class func loopScrollViewWith(frame:CGRect,smallImageUrl:[String],bigImageUrl:[String]) -> UIView{
+    let ScreenWidth = UIScreen.main.bounds.width
+    let ScreenHeight = UIScreen.main.bounds.height
+    fileprivate var scrollView = UIScrollView()
+    fileprivate var pageControl = UIPageControl()
+    //private var collectionView = UICollectionView()
+    fileprivate var keyWindow = UIWindow()
+    class func loopScrollViewWith(_ frame:CGRect,smallImageUrl:[String],bigImageUrl:[String]) -> UIView{
         let tempLoopScrollView = loopScrollView()
         tempLoopScrollView.frame = frame
-        if let window = UIApplication.sharedApplication().keyWindow{
+        if let window = UIApplication.shared.keyWindow{
             tempLoopScrollView.keyWindow = window
         }
         
@@ -28,47 +28,47 @@ class loopScrollView: UIView,UIScrollViewDelegate {
         return tempLoopScrollView
     }
     
-    private func createScrollView(frame:CGRect,imageCount:Int)->UIScrollView{
-        scrollView.frame = CGRectMake(0,0,frame.width,frame.height)
-        scrollView.backgroundColor = UIColor.whiteColor()
+    fileprivate func createScrollView(_ frame:CGRect,imageCount:Int)->UIScrollView{
+        scrollView.frame = CGRect(x: 0,y: 0,width: frame.width,height: frame.height)
+        scrollView.backgroundColor = UIColor.white
         scrollView.delegate = self
-        scrollView.pagingEnabled = true
+        scrollView.isPagingEnabled = true
         scrollView.bounces = true
-        scrollView.contentSize = CGSizeMake(ScreenWidth*CGFloat(imageCount),frame.height)
+        scrollView.contentSize = CGSize(width: ScreenWidth*CGFloat(imageCount),height: frame.height)
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         return scrollView
     }
-    private func showSmallImage(imageArray:[String],height:CGFloat){
-        for (i,url) in imageArray.enumerate() {
-            let imageView = UIImageView(frame: CGRectMake(CGFloat(i)*ScreenWidth, 0, ScreenWidth, height))
-            imageView.sd_setImageWithURL(NSURL(string: url), placeholderImage: UIImage.sd_animatedGIFNamed("failure"))
-            imageView.userInteractionEnabled = true
+    fileprivate func showSmallImage(_ imageArray:[String],height:CGFloat){
+        for (i,url) in imageArray.enumerated() {
+            let imageView = UIImageView(frame: CGRect(x: CGFloat(i)*ScreenWidth, y: 0, width: ScreenWidth, height: height))
+            imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage.sd_animatedGIFNamed("failure"))
+            imageView.isUserInteractionEnabled = true
             imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(loopScrollView.imageClick)))
             imageView.tag = i
             scrollView.addSubview(imageView)
         }
     }
     
-    private func createPageControl(frame:CGRect,imageCount:Int) -> UIPageControl{
+    fileprivate func createPageControl(_ frame:CGRect,imageCount:Int) -> UIPageControl{
         let pageControlWidth = CGFloat(imageCount) * 15
-        pageControl.frame = CGRectMake(ScreenWidth/2 - pageControlWidth/2, frame.height-30,pageControlWidth, 30)
-        pageControl.backgroundColor = UIColor.clearColor()
+        pageControl.frame = CGRect(x: ScreenWidth/2 - pageControlWidth/2, y: frame.height-30,width: pageControlWidth, height: 30)
+        pageControl.backgroundColor = UIColor.clear
         pageControl.numberOfPages = imageCount
         return pageControl
     }
     
-    private func createCollectionView(){
+    fileprivate func createCollectionView(){
         
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let currentPage  = scrollView.contentOffset.x/ScreenWidth
         pageControl.currentPage = Int(currentPage)
         
     }
     
-    dynamic private func imageClick(tap:UITapGestureRecognizer){
+    dynamic fileprivate func imageClick(_ tap:UITapGestureRecognizer){
 //        keyWindow.hidden = false
     }
     

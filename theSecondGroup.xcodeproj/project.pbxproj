@@ -33,6 +33,8 @@
 		F499D7381DBCFB52008E9CA0 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F499D7261DBCFB52008E9CA0 /* UIImageView+WebCache.m */; };
 		F499D7391DBCFB52008E9CA0 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F499D7281DBCFB52008E9CA0 /* UIView+WebCacheOperation.m */; };
 		F499D7411DBD0839008E9CA0 /* failure.gif in Resources */ = {isa = PBXBuildFile; fileRef = F499D7401DBD0839008E9CA0 /* failure.gif */; };
+		F4C51B791DBEF1940009415E /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51B781DBEF1940009415E /* ImageModel.swift */; };
+		F4C51B7B1DBEF5F10009415E /* showBigPictureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51B7A1DBEF5F10009415E /* showBigPictureVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		F499D73C1DBD06CB008E9CA0 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		F499D73E1DBD06E1008E9CA0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F499D7401DBD0839008E9CA0 /* failure.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = failure.gif; sourceTree = "<group>"; };
+		F4C51B781DBEF1940009415E /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		F4C51B7A1DBEF5F10009415E /* showBigPictureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showBigPictureVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 				F40C4FB91DBCAF9700952B0A /* AppDelegate.swift */,
 				F40C4FBB1DBCAF9700952B0A /* ViewController.swift */,
 				F40C4FE91DBCB11500952B0A /* loopScrollView.swift */,
+				F4C51B7A1DBEF5F10009415E /* showBigPictureVC.swift */,
+				F4C51B781DBEF1940009415E /* ImageModel.swift */,
 				F499D73A1DBCFC35008E9CA0 /* bridge.h */,
 				F499D7061DBCFB52008E9CA0 /* SDWebImage */,
 				F40C4FBD1DBCAF9700952B0A /* Main.storyboard */,
@@ -313,15 +319,18 @@
 					F40C4FB51DBCAF9700952B0A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 48X32H492E;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					F40C4FC91DBCAF9800952B0A = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F40C4FB51DBCAF9700952B0A;
 					};
 					F40C4FD41DBCAF9800952B0A = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F40C4FB51DBCAF9700952B0A;
 					};
@@ -385,6 +394,7 @@
 				F499D72B1DBCFB52008E9CA0 /* NSData+ImageContentType.m in Sources */,
 				F499D7311DBCFB52008E9CA0 /* SDWebImageManager.m in Sources */,
 				F499D72F1DBCFB52008E9CA0 /* SDWebImageDownloader.m in Sources */,
+				F4C51B7B1DBEF5F10009415E /* showBigPictureVC.swift in Sources */,
 				F499D7361DBCFB52008E9CA0 /* UIImage+WebP.m in Sources */,
 				F499D7391DBCFB52008E9CA0 /* UIView+WebCacheOperation.m in Sources */,
 				F499D72C1DBCFB52008E9CA0 /* SDImageCache.m in Sources */,
@@ -392,6 +402,7 @@
 				F40C4FEA1DBCB11500952B0A /* loopScrollView.swift in Sources */,
 				F499D72E1DBCFB52008E9CA0 /* SDWebImageDecoder.m in Sources */,
 				F499D7351DBCFB52008E9CA0 /* UIImage+MultiFormat.m in Sources */,
+				F4C51B791DBEF1940009415E /* ImageModel.swift in Sources */,
 				F499D7301DBCFB52008E9CA0 /* SDWebImageDownloaderOperation.m in Sources */,
 				F499D72A1DBCFB52008E9CA0 /* README.md in Sources */,
 				F499D7331DBCFB52008E9CA0 /* UIButton+WebCache.m in Sources */,
@@ -557,7 +568,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tuhu.cn.mian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -571,7 +582,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tuhu.cn.mian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
