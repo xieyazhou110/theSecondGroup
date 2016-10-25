@@ -28,42 +28,7 @@ class showBigPictureVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    class func showBigPictureWithUrl(_ smallImageUrl:[String],bigImageUrl:[String]){
-        let tempshowBigPictureVC = showBigPictureVC()
-        guard smallImageUrl.count == bigImageUrl.count else {
-            return
-        }
-        for url in smallImageUrl {
-            let model = ImageModel()
-            model.smallImageUrl = url
-            tempshowBigPictureVC.modelArray.append(model)
-        }
-        for (idx,bigUrl) in bigImageUrl.enumerated() {
-            tempshowBigPictureVC.modelArray[idx].bigImageUrl = bigUrl
-        }
-        tempshowBigPictureVC.showBigPicture(tempshowBigPictureVC.modelArray)
-    }
-    
-    class func showBigPictureOnlyBigWithUrl(_ bigImageUrl:[String]){
-        let tempshowBigPictureVC = showBigPictureVC()
-        for url in bigImageUrl {
-            let model = ImageModel()
-            model.bigImageUrl = url
-            tempshowBigPictureVC.modelArray.append(model)
-        }
-        tempshowBigPictureVC.showBigPicture(tempshowBigPictureVC.modelArray)
-    }
-
-//    class func showBigPictureWithUIImage(){
-//        
-//    }
-    
-    fileprivate func showBigPicture(_ imageModelArray:[ImageModel]){
-        
-    }
-   
     
     func close() {
         self.dismiss(animated: true, completion: nil)

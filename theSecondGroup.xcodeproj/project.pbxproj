@@ -14,7 +14,6 @@
 		F40C4FC41DBCAF9700952B0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40C4FC21DBCAF9700952B0A /* LaunchScreen.storyboard */; };
 		F40C4FCF1DBCAF9800952B0A /* theSecondGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C4FCE1DBCAF9800952B0A /* theSecondGroupTests.swift */; };
 		F40C4FDA1DBCAF9800952B0A /* theSecondGroupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C4FD91DBCAF9800952B0A /* theSecondGroupUITests.swift */; };
-		F40C4FEA1DBCB11500952B0A /* loopScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C4FE91DBCB11500952B0A /* loopScrollView.swift */; };
 		F499D7291DBCFB52008E9CA0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F499D7071DBCFB52008E9CA0 /* LICENSE */; };
 		F499D72A1DBCFB52008E9CA0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F499D7081DBCFB52008E9CA0 /* README.md */; };
 		F499D72B1DBCFB52008E9CA0 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = F499D70B1DBCFB52008E9CA0 /* NSData+ImageContentType.m */; };
@@ -35,6 +34,7 @@
 		F499D7411DBD0839008E9CA0 /* failure.gif in Resources */ = {isa = PBXBuildFile; fileRef = F499D7401DBD0839008E9CA0 /* failure.gif */; };
 		F4C51B791DBEF1940009415E /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51B781DBEF1940009415E /* ImageModel.swift */; };
 		F4C51B7B1DBEF5F10009415E /* showBigPictureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51B7A1DBEF5F10009415E /* showBigPictureVC.swift */; };
+		F4C51B7D1DBF43270009415E /* BrowsePicturePublicMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C51B7C1DBF43270009415E /* BrowsePicturePublicMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,6 @@
 		F40C4FD51DBCAF9800952B0A /* theSecondGroupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = theSecondGroupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40C4FD91DBCAF9800952B0A /* theSecondGroupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theSecondGroupUITests.swift; sourceTree = "<group>"; };
 		F40C4FDB1DBCAF9800952B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F40C4FE91DBCB11500952B0A /* loopScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loopScrollView.swift; sourceTree = "<group>"; };
 		F499D7071DBCFB52008E9CA0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F499D7081DBCFB52008E9CA0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F499D70A1DBCFB52008E9CA0 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -108,6 +107,7 @@
 		F499D7401DBD0839008E9CA0 /* failure.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = failure.gif; sourceTree = "<group>"; };
 		F4C51B781DBEF1940009415E /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		F4C51B7A1DBEF5F10009415E /* showBigPictureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showBigPictureVC.swift; sourceTree = "<group>"; };
+		F4C51B7C1DBF43270009415E /* BrowsePicturePublicMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowsePicturePublicMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				F40C4FB91DBCAF9700952B0A /* AppDelegate.swift */,
+				F4C51B7C1DBF43270009415E /* BrowsePicturePublicMethod.swift */,
 				F40C4FBB1DBCAF9700952B0A /* ViewController.swift */,
-				F40C4FE91DBCB11500952B0A /* loopScrollView.swift */,
 				F4C51B7A1DBEF5F10009415E /* showBigPictureVC.swift */,
 				F4C51B781DBEF1940009415E /* ImageModel.swift */,
 				F499D73A1DBCFC35008E9CA0 /* bridge.h */,
@@ -396,10 +396,10 @@
 				F499D72F1DBCFB52008E9CA0 /* SDWebImageDownloader.m in Sources */,
 				F4C51B7B1DBEF5F10009415E /* showBigPictureVC.swift in Sources */,
 				F499D7361DBCFB52008E9CA0 /* UIImage+WebP.m in Sources */,
+				F4C51B7D1DBF43270009415E /* BrowsePicturePublicMethod.swift in Sources */,
 				F499D7391DBCFB52008E9CA0 /* UIView+WebCacheOperation.m in Sources */,
 				F499D72C1DBCFB52008E9CA0 /* SDImageCache.m in Sources */,
 				F40C4FBC1DBCAF9700952B0A /* ViewController.swift in Sources */,
-				F40C4FEA1DBCB11500952B0A /* loopScrollView.swift in Sources */,
 				F499D72E1DBCFB52008E9CA0 /* SDWebImageDecoder.m in Sources */,
 				F499D7351DBCFB52008E9CA0 /* UIImage+MultiFormat.m in Sources */,
 				F4C51B791DBEF1940009415E /* ImageModel.swift in Sources */,

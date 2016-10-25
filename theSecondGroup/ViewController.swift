@@ -28,7 +28,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         self.showSmallImage(imageArray:smallImageArray, height: backView.frame.height)
         self.view.addSubview(backView)
         
-        showBigPictureVC.showBigPictureWithUrl(smallImageArray, bigImageUrl: bigImageArray)
+//        BrowsePicturePublicMethod.showBigPictureWithUrl(smallImageUrl: smallImageArray, bigImageUrl: bigImageArray,controller: self)
     }
     
     fileprivate func createPageControl(_ frame:CGRect,imageCount:Int) -> UIPageControl{
@@ -61,9 +61,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         }
     }
     dynamic fileprivate func imageClick(tap:UITapGestureRecognizer){
-        let vc = showBigPictureVC()
-        showBigPictureVC.showBigPictureWithUrl(smallImageArray, bigImageUrl: bigImageArray)
-        self.present(vc, animated: true, completion: nil)
+        BrowsePicturePublicMethod.showBigPictureWithUrl(smallImageUrl: [], bigImageUrl: bigImageArray,controller: self)
     }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
