@@ -10,8 +10,6 @@ import UIKit
 
 class BrowsePicturePublicMethod: NSObject {
     
-    fileprivate let ScreenWidth = UIScreen.main.bounds.width
-    fileprivate let ScreenHeight = UIScreen.main.bounds.height
     fileprivate var modelArray = [ImageModel]()
     //传进来大小图url的数组
     class func showBigPictureWithUrl(smallImageUrl:[String],bigImageUrl:[String],controller:UIViewController){
@@ -49,6 +47,8 @@ class BrowsePicturePublicMethod: NSObject {
         tempBrowsePicturePublicMethod.showBigPicture(imageModelArray:tempBrowsePicturePublicMethod.modelArray,controller: controller)
     }
     
+    
+    //
     fileprivate func showBigPicture(imageModelArray:[ImageModel],controller:UIViewController){
         
         let vc = showBigPictureVC()
