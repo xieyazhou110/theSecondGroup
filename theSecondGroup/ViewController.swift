@@ -61,7 +61,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     //到此处调用展示大图的方法
     dynamic fileprivate func imageClick(tap:UITapGestureRecognizer){
                 
-        BrowsePicturePublicMethod.showBigPictureWithUrl(smallImageUrl: smallImageArray, bigImageUrl: bigImageArray,rect:CGRect(x:100, y: 100, width: 100, height: 100) , controller: self) { (index) in
+        BrowsePicturePublicMethod.showBigPictureWithUrl(smallImageUrl: smallImageArray, bigImageUrl: bigImageArray,rect:CGRect(x:100, y: 100, width: 100, height: 100) ,index: (tap.view?.tag) ?? 0, controller: self) { (index) in
             
         }
         
